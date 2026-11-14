@@ -1,0 +1,67 @@
+version: v0.4
+project:
+  name: "Erdős Problem 708 for four and five moduli: g(4) = 5 and g(5) = 6"
+  description: >-
+    Let g(n) be minimal such that, for any n distinct integers at least two and any
+    set I of consecutive integers whose length is the largest of them, some g(n)
+    elements of I have a product that the product of the n integers divides
+    (Erdős Problem 708). The formalization proves g(4) = 5 and g(5) = 6, stated
+    with exact cardinality as in the source: for four (five) such integers every
+    such interval contains five (six) elements with this property, and for some
+    four (five) integers and some interval no smaller number of elements suffices.
+    Because every such set of n integers has largest element at least n + 1,
+    exact cardinality and "at most" cardinality give the same value when
+    g(n) = n + 1. The formalization proves both forms: the source's exact
+    reading, and the at-most reading with the definitions of the open Formal
+    Conjectures pull request #4388 for Erdős Problem 708, copied verbatim. The general
+    question, whether g(n) is at most 2n or (2 + o(1))n, is not addressed.
+  authors:
+    - "John Tripodo"
+  responsible_maintainers:
+    - "John Tripodo"
+  license: Apache-2.0
+classification:
+  arxiv: [math.NT]
+  msc2020: ["11A05", "11B75"]
+sources:
+  - title: "Erdős Problem 708 for four and five moduli (this formalization)"
+    type: original-proof
+    relationship: other
+    authors: ["John Tripodo"]
+    note: "Original to this project, as far as our literature search shows: the upper bounds g(4) <= 5 and g(5) <= 6, which complete the exact values, and the Lean formalization. No separate written paper is public. The lower bounds are prior work: they follow from Erdős and Surányi (1959), Theorem IV, and the explicit instances are credited below. The general conjecture is not claimed."
+  - title: "Bemerkungen zu einer Aufgabe eines mathematischen Wettbewerbs"
+    type: paper
+    relationship: background
+    authors: ["Paul Erdős", "János Surányi"]
+    url: "https://old.renyi.hu/~p_erdos/1959-07.pdf"
+    note: "Mat. Lapok 10 (1959), 39-48 (Hungarian; title in Zentralblatt Zbl 093.25702). Theorem IV: for every k >= 3 there are k distinct integers and an interval as long as the largest of them in which no k elements have a product divisible by their product. This gives the lower bounds g(4) >= 5 and g(5) >= 6 formalized here. Also proves g(3) = 4."
+  - title: "Erdős Problem 708"
+    type: web page
+    relationship: background
+    url: "https://www.erdosproblems.com/708"
+    note: "Problem statement and status. Lists g(2) = 2 (Gallai) and g(3) = 4 (Erdős and Surányi)."
+  - title: "Some of my forgotten problems in number theory"
+    type: paper
+    relationship: background
+    authors: ["Paul Erdős"]
+    url: "https://hrj.episciences.org/125/pdf"
+    note: "Hardy-Ramanujan J. 15 (1992). Source of the question g(n) <= 2n and of the lower bound g(n) >= (2 - o(1))n with Surányi."
+  - title: "Explicit upper bounds for the Erdős–Surányi function g(n)"
+    type: paper
+    relationship: background
+    authors: ["Haoyu Chen"]
+    url: "https://doi.org/10.5281/zenodo.22267395"
+    note: "General linear upper bounds for g(n), and computed instances for g(4) >= 5 and g(5) >= 6. The explicit g(5) >= 6 witness formalized here (moduli 5, 10, 12, 15, 20; interval 51 to 70) is Chen's. The g(4) >= 5 witness here (77, 91, 139, 143 on 5935 to 6077) extends the three-modulus instance (77, 91, 143) at x = 5934 in Chen's repository. Repository: https://github.com/chy4pro/erdos-708-explicit-upper-bounds (commit dc150fd7)."
+automation:
+  methods:
+    - method: agent
+      tool_setup: "AI-assisted proof development, formalization and porting using ChatGPT/Codex and Claude; no specific model identity is asserted."
+  notes: "John Tripodo directed AI-assisted proof development and formalization. No personal human proof verification is claimed. John accepts responsibility as the human maintainer, including handling reported issues and corrections."
+review:
+  status: unchecked
+  notes: >-
+    Local sandboxed lake comparator (paranoid, six kernels) passed on Lean
+    4.35.0-rc2 with Mathlib 065356127b1dc0016f66b7283ce0ce2c4055aa55, with
+    statement-mutation tests rejected; official Palomar verification pending.
+    No human independent mathematical or priority review, journal acceptance or
+    platform endorsement is claimed.

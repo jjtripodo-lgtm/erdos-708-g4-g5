@@ -1,0 +1,15 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "Erdos708.erdos_708.variants.four",
+    "Erdos708.erdos_708.variants.five",
+    "Erdos708.erdos_708.variants.g_four",
+    "Erdos708.erdos_708.variants.g_five"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}
