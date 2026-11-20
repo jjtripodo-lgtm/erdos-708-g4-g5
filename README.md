@@ -2,6 +2,23 @@
 
 A Lean 4 formalization of two exact values of the Erdős–Surányi function g(n) ([Erdős Problem 708](https://www.erdosproblems.com/708)). The lower bounds g(4) ≥ 5 and g(5) ≥ 6 are due to Erdős and Surányi (1959). This repository proves the matching upper bounds g(4) ≤ 5 and g(5) ≤ 6, which complete the exact values, and formalizes both directions. The general question, whether g(n) ≤ 2n, is not addressed.
 
+## Paper and registration
+
+- **Paper.** J. Tripodo, *Sharp finite cases of the Erdős–Surányi interval-product problem: g(4) = 5 and g(5) = 6*, Hexagon preprint [hexagon:2611.00694](https://hexagonmath.org/abs/2611.00694v1) (2026), CC BY 4.0. It gives the written proofs, credits the prior work, and maps each written lemma to its Lean declaration in this repository.
+- **Formal verification.** Palomar registry entry [PALOMAR-2026-11-19-000019](https://palomar-registry.org/entry?id=PALOMAR-2026-11-19-000019&version=1), registered at commit [`00fbb23c`](https://github.com/jjtripodo-lgtm/erdos-708-g4-g5/tree/00fbb23c3084daa88ea420aa9c74177127d5283f). Later commits, such as this README edit, change no Lean file and are not part of the registered artifact.
+
+To cite the paper:
+
+```bibtex
+@misc{hexagon:2611.00694v1,
+  title        = {Sharp finite cases of the Erd{\H{o}}s--Sur{\'a}nyi interval-product problem: $g(4)=5$ and $g(5)=6$},
+  author       = {Tripodo, John},
+  howpublished = {Hexagon preprint hexagon:2611.00694v1},
+  year         = {2026},
+  url          = {https://hexagonmath.org/abs/2611.00694v1}
+}
+```
+
 ## Result
 
 Let g(n) be minimal such that, for any n distinct integers at least 2 and any set I of consecutive integers whose length is the largest of them, some g(n) elements of I have a product that the product of the n integers divides ([erdosproblems.com/708](https://www.erdosproblems.com/708)).
